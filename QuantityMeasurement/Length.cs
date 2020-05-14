@@ -6,20 +6,30 @@ namespace QuantityMeasurement
 {
     public class Length
     {
-        //Variables
+        //// Variables
         Unit unit;
         private double value;
 
+        /// <summary>
+        /// Enum class for defines constant 
+        /// </summary>
         public enum Unit
         {
-            FEET
+            FEET,
+            INCH
         };
 
-        // Default Constructor
+        /// <summary>
+        /// Default Constructor 
+        /// </summary>
         public Length()
         { }
 
-        // Parameterised COnstructor
+        /// <summary>
+        /// Parameterised COnstructor 
+        /// </summary>
+        /// <param name="unit"></param>
+        /// <param name="value"></param>
         public Length(Unit unit, double value)
         {
             this.unit = unit;
@@ -39,7 +49,7 @@ namespace QuantityMeasurement
             if (obj == this)
                 return true;
             return (this.unit == ((Length)obj).unit) && (this.value == ((Length)obj).value) ||
-                 (this.unit.Equals(Unit.FEET)&&
+                 (this.unit.Equals(Unit.FEET) && ((Length)obj).unit.Equals(Unit.INCH)&&
                 this.value == 0 && ((Length)obj).value == 0);
         }
 
