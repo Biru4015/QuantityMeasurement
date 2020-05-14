@@ -84,12 +84,24 @@ namespace QuantityMeasurementTest
         /// Checking instance of Inch's and checking enequality
         /// </summary>
         [Test]
-        public void CheckGivenFirstInchNotEqualToSecondInchReturnBoolValue()
+        public void CheckGivenFirstInchNotEqualToSecondInch_WhenCompared_ShouldReturnBoolValue()
         {
             Length firstInchValue = new Length(Length.Unit.INCH, 1.0);
             Length secondInchValue = new Length(Length.Unit.INCH, 0.0);
             bool equals = firstInchValue.Equals(secondInchValue);
             Assert.IsFalse(equals);
+        }
+
+        /// <summary>
+        /// Test case 1.8
+        /// Checking type
+        /// </summary>
+        [Test]
+        public void CheckGivenTypeInchEqual_WhenCompared_ShouldReturnTypeInch()
+        {
+            Length firstInchValue = new Length(Length.Unit.INCH, 0.0);
+            Length secondInchValue = new Length(Length.Unit.INCH, 0.0);
+            Assert.AreEqual(firstInchValue.GetType(), secondInchValue.GetType());
         }
     }
 }
