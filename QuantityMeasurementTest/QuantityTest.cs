@@ -66,5 +66,30 @@ namespace QuantityMeasurementTest
             bool equals = firstInch.Equals(secondInch);
             Assert.IsFalse(equals);
         }
+
+        /// <summary>
+        /// Test case 1.6
+        /// Checking instance of Length are equal or not Checking Inch Feet Equality
+        /// </summary>
+        [Test]
+        public void CheckGivenZeroFeetAndZeroInchAreEqual()
+        {
+            Length firstFeet = new Length(Length.Unit.FEET, 0.0);
+            Length secondFeet = new Length(Length.Unit.INCH, 0.0);
+            Assert.AreEqual(firstFeet, secondFeet);
+        }
+
+        /// <summary>
+        /// Test 1.7
+        /// Checking instance of Inch's and checking enequality
+        /// </summary>
+        [Test]
+        public void CheckGivenFirstInchNotEqualToSecondInchReturnBoolValue()
+        {
+            Length firstInchValue = new Length(Length.Unit.INCH, 1.0);
+            Length secondInchValue = new Length(Length.Unit.INCH, 0.0);
+            bool equals = firstInchValue.Equals(secondInchValue);
+            Assert.IsFalse(equals);
+        }
     }
 }
