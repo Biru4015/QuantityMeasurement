@@ -180,5 +180,17 @@ namespace QuantityMeasurementTest
             double twelveInch = 12.0;
             Assert.AreEqual(oneFeet, twelveInch);
         }
+
+        /// <summary>
+        /// Test case 1.15
+        /// Checking 12 Inch is equal to 1 feet
+        /// </summary>
+        [Test]
+        public void CheckGivenTwelveInchIsEqualToOneFeet_WhenCalculated_ShouldReturnsEquals()
+        {
+            double oneFeet = 1.0;
+            double twelveInch = lengthConversion.InchToFeet(12.0);
+            Assert.AreEqual(oneFeet, twelveInch);
+        }
     }
 }
