@@ -1,0 +1,13 @@
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.exe
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.deps.json
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.runtimeconfig.json
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.runtimeconfig.dev.json
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.dll
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\bin\Debug\netcoreapp3.1\QuantityMeasurement.pdb
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.csprojAssemblyReference.cache
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.csproj.CoreCompileInputs.cache
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.AssemblyInfoInputs.cache
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.AssemblyInfo.cs
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.dll
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.pdb
+C:\Users\Birendra Kumar\source\repos\QuantityMeasurement\obj\Debug\netcoreapp3.1\QuantityMeasurement.genruntimeconfig.cache
