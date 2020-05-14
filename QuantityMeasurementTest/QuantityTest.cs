@@ -46,12 +46,25 @@ namespace QuantityMeasurementTest
         /// Checking instance of Inch are equal or not
         /// </summary>
         [Test]
-        public void CheckGivenZeroInchReturnZero()
+        public void CheckGivenZeroInch_WhenCompare_ShouldReturnsTrue()
         {
             Length firstInch = new Length(Length.Unit.INCH, 0.0);
             Length secondInch = new Length(Length.Unit.INCH, 0.0);
             bool equals = firstInch.Equals(secondInch);
             Assert.IsTrue(equals);
+        }
+
+        /// <summary>
+        /// Test case 1.5
+        /// When given 1 feet and 1 inch returns not equals
+        /// </summary>
+        [Test]
+        public void Given1FeetAnd1Inch_WhenCompared_ShouldReturnsFalse()
+        {
+            Length firstInch = new Length(Length.Unit.FEET, 1.0);
+            Length secondInch = new Length(Length.Unit.INCH, 1.0);
+            bool equals = firstInch.Equals(secondInch);
+            Assert.IsFalse(equals);
         }
     }
 }
