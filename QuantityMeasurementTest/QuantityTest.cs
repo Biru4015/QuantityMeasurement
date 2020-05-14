@@ -34,11 +34,24 @@ namespace QuantityMeasurementTest
         /// Checking instance of Feet that referance is equal or not
         /// </summary>
         [Test]
-        public void CheckGivenReferanceFeetEqualToGivenReferanceFeet()
+        public void CheckGivenReferanceFeetEqualToGivenReferanceFeet_WhenChecking_ShouldReturnTrue()
         {
             Length firstReferanceFeet = new Length();
             Length secondReferanceFeet = firstReferanceFeet;
             Assert.AreEqual(firstReferanceFeet, secondReferanceFeet);
+        }
+
+        /// <summary>
+        /// Test case 1.4
+        /// Checking instance of Inch are equal or not
+        /// </summary>
+        [Test]
+        public void CheckGivenZeroInchReturnZero()
+        {
+            Length firstInch = new Length(Length.Unit.INCH, 0.0);
+            Length secondInch = new Length(Length.Unit.INCH, 0.0);
+            bool equals = firstInch.Equals(secondInch);
+            Assert.IsTrue(equals);
         }
     }
 }
