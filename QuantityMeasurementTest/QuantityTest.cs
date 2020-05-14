@@ -156,5 +156,29 @@ namespace QuantityMeasurementTest
             double oneInch = lengthConversion.InchToFeet(1.0);
             Assert.AreNotEqual(oneFeet, oneInch);
         }
+
+        /// <summary>
+        /// Test case 1.13
+        /// Checking 1 Inch is not equal to 1 Foot
+        /// </summary>
+        [Test]
+        public void CheckGivenOneInchIsNotEqualToOneFeet_WhenCalculated_ShouldReturnsTrue()
+        {
+            double oneInch = lengthConversion.InchToFeet(1.0);
+            double oneFeet = lengthConversion.FeetToInch(1.0);
+            Assert.AreNotEqual(oneInch, oneFeet);
+        }
+
+        /// <summary>
+        /// Test case 1.14
+        /// Checking 1 Feet is equal to 12 Inch
+        /// </summary>
+        [Test]
+        public void CheckGivenOneFeetIsEqualToTwelveInch_WhenCalculated_ShouldReturnTrue()
+        {
+            double oneFeet = lengthConversion.FeetToInch(1.0);
+            double twelveInch = 12.0;
+            Assert.AreEqual(oneFeet, twelveInch);
+        }
     }
 }
