@@ -116,5 +116,28 @@ namespace QuantityMeasurementTest
             bool equals = firstFeetValue.Equals(secondFeetValue);
             Assert.IsFalse(equals);
         }
+
+        /// <summary>
+        /// Test case 1.10
+        /// Checking instance of inch that it is null or not
+        /// </summary>
+        [Test]
+        public void CheckGivenZNullInchEqual_WhenCompared_ReturnNullInch()
+        {
+            bool equals = Length.Equals(Length.Unit.INCH, null);
+            Assert.IsFalse(equals);
+        }
+
+        /// <summary>
+        /// Test case 1.11
+        /// Checking instance of Inch that referance is equal or not
+        /// </summary>
+        [Test]
+        public void CheckGivenReferanceInchEqualToGivenReferanceInch_WhenCompared_ShouldReturnsEquals()
+        {
+            Length firstReferanceInch = new Length();
+            Length secondReferanceInch = firstReferanceInch;
+            Assert.AreEqual(firstReferanceInch, secondReferanceInch);
+        }
     }
 }
