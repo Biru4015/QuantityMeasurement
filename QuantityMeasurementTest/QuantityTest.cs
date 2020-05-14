@@ -103,5 +103,18 @@ namespace QuantityMeasurementTest
             Length secondInchValue = new Length(Length.Unit.INCH, 0.0);
             Assert.AreEqual(firstInchValue.GetType(), secondInchValue.GetType());
         }
+
+        /// <summary>
+        /// Test case 1.9
+        /// Checking instance of Feet's and checking enequality
+        /// </summary>
+        [Test]
+        public void CheckGivenFirstFeetNotEqualToSecond_WhenCompared_FeetReturnBoolValue()
+        { 
+            Length firstFeetValue = new Length(Length.Unit.FEET, 1.0);
+            Length secondFeetValue = new Length(Length.Unit.FEET, 0.0);
+            bool equals = firstFeetValue.Equals(secondFeetValue);
+            Assert.IsFalse(equals);
+        }
     }
 }
