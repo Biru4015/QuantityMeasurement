@@ -6,6 +6,11 @@ namespace QuantityMeasurementTest
     public class QuantityTest
     {
         /// <summary>
+        /// Object of length class
+        /// </summary>
+        Length lengthConversion = new Length();
+
+        /// <summary>
         /// Test case 1.1
         /// When given 0 feet and 0 feet are equals or not
         /// </summary>
@@ -138,6 +143,18 @@ namespace QuantityMeasurementTest
             Length firstReferanceInch = new Length();
             Length secondReferanceInch = firstReferanceInch;
             Assert.AreEqual(firstReferanceInch, secondReferanceInch);
+        }
+
+        /// <summary>
+        /// Test case 1.12
+        /// Checking 1 feet is not equal to 1 inch
+        /// </summary>
+        [Test]
+        public void CheckGivenOneFeetIsNotEqualToOneInch_WhenConverted_ShouldReturnsEquals()
+        {
+            double oneFeet = lengthConversion.FeetToInch(1.0);
+            double oneInch = lengthConversion.InchToFeet(1.0);
+            Assert.AreNotEqual(oneFeet, oneInch);
         }
     }
 }
