@@ -28,5 +28,17 @@ namespace QuantityMeasurementTest
             bool equals = Length.Equals(Length.Unit.FEET, null);
             Assert.IsFalse(equals);
         }
+
+        /// <summary>
+        /// Test case 1.3
+        /// Checking instance of Feet that referance is equal or not
+        /// </summary>
+        [Test]
+        public void CheckGivenReferanceFeetEqualToGivenReferanceFeet()
+        {
+            Length firstReferanceFeet = new Length();
+            Length secondReferanceFeet = firstReferanceFeet;
+            Assert.AreEqual(firstReferanceFeet, secondReferanceFeet);
+        }
     }
 }
