@@ -15,15 +15,5 @@ namespace QuantityMeasurement
         {
             Console.WriteLine("WELCOME TO QUANTITY MEASUREMENT TTD PROBLEM!!");
         }
-
-        /// <summary>
-        /// Method to Feet
-        /// </summary>
-        /// <param name="input"> input </param>
-        /// <returns> Calculate Feet </returns>
-        public double Feetmeasure(double input)
-        {
-            return feet = 12 * input;
-        }
     }
 }
