@@ -10,12 +10,23 @@ namespace QuantityMeasurementTest
         /// When given 0 feet and 0 feet are equals or not
         /// </summary>
         [Test]
-        public void given0Feetand0Feet_ShouldReturnEqual()
+        public void given0Feetand0Feet_WhenCompared_ShouldReturnEqual()
         {
-            Conversion converstion = new Conversion();
-            double feet1 = 0.0;
-            double feet2 = converstion.Feetmeasure(0.0);
-            Assert.AreEqual(feet1,feet2);
+            Length firstFeet = new Length(Length.Unit.FEET, 0.0);
+            Length secondFeet = new Length(Length.Unit.FEET, 0.0);
+            bool equals = firstFeet.Equals(secondFeet);
+            Assert.IsTrue(equals);
+        }
+
+        /// <summary>
+        /// Test case 1.2
+        /// Checking instance of Conversion that it is null or not
+        /// </summary>
+        [Test]
+        public void CheckGivenZNullFeetEqualOrNot_WhenCopared_ShouldReturnNullFeet()
+        {
+            bool equals = Length.Equals(Length.Unit.FEET, null);
+            Assert.IsFalse(equals);
         }
     }
 }
