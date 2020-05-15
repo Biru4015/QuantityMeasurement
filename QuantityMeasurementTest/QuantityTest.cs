@@ -232,7 +232,7 @@ namespace QuantityMeasurementTest
 
         /// <summary>
         /// Test case 2.4
-        /// Checking 1 Yard is equal to 36 Inch
+        /// This test case for Checking 1 Yard is equal to 36 Inch
         /// </summary>
         [Test]
         public void CheckGivenOneYardIsEqualToThirtySixInch()
@@ -240,6 +240,30 @@ namespace QuantityMeasurementTest
             double thirtySixInch = 36.0;
             double oneYard = lengthConversion.LengthConversion("YardToInch", 1.0);
             Assert.AreEqual(thirtySixInch, oneYard);
+        }
+
+        /// <summary>
+        /// Test case 2.5
+        /// This test case for Checking 36 Inch is equal to 1 Yard
+        /// </summary>
+        [Test]
+        public void CheckGiventhirtySixInchIsEqualToOneYard_WhenCompared_ShouldReturnsEquals()
+        {
+            double thirtySixInch = lengthConversion.LengthConversion("InchToYard", 36.0);
+            double oneYard = 1.0;
+            Assert.AreEqual(oneYard, thirtySixInch);
+        }
+
+        /// <summary>
+        /// Test case 2.6
+        /// This test for Checking 1 Yard is equal to 3 Feet
+        /// </summary>
+        [Test]
+        public void CheckGivenOneYardIsEqualToThreeFeet_WhenCompared_ShouldReturnsEquals()
+        {
+            double oneYard = lengthConversion.LengthConversion("YardToFeet", 1.0);
+            double threeFeet = 3.0;
+            Assert.AreEqual(threeFeet, oneYard);
         }
     }
 }
