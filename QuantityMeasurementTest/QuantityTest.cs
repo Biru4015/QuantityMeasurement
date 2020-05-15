@@ -277,5 +277,17 @@ namespace QuantityMeasurementTest
             double fiveCentimeter = 5.0;
             Assert.AreEqual(fiveCentimeter, twoInch);
         }
+
+        /// <summary>
+        /// Test case  4.1
+        /// This test case for checking 2 Inch addition to 2 Inch Equal to 4 inch
+        /// </summary>
+        [Test]
+        public void CheckGivenTwoLengthsInInchForAdd_WhenAdded_ShouldRetunsFourInches()
+        {
+            double twoInch = lengthConversion.AddTwoLenghtsInInch(Length.Unit.INCH, 2, Length.Unit.INCH, 2);
+            double addTwoInch = 4.0;
+            Assert.AreEqual(twoInch, addTwoInch);
+        }
     }
 }
