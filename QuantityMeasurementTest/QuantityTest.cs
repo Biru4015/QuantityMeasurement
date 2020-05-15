@@ -217,5 +217,17 @@ namespace QuantityMeasurementTest
             double oneYard = lengthConversion.LengthConversion("YardToFeet", 1.0);
             Assert.AreNotEqual(oneFeet, oneYard);
         }
+
+        /// <summary>
+        /// Test case 2.3
+        /// This test case is checking for one feet and one yard is equals or not
+        /// </summary>
+        [Test]
+        public void CheckGivenOneInchIsNotEqualToOneYard_WhenCompared_ShouldReturnsNotEquals()
+        {
+            double oneInch = 1.0;
+            double oneYard = lengthConversion.LengthConversion("InchToYard", 1.0);
+            Assert.AreNotEqual(oneInch, oneYard);
+        }
     }
 }
