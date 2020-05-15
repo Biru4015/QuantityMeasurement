@@ -199,11 +199,23 @@ namespace QuantityMeasurementTest
         /// Checking 3 Feet is equal to 1 Yard
         /// </summary>
         [Test]
-        public void CheckGivenThreeFeetIsEqualToOneYard()
+        public void CheckGivenThreeFeetIsEqualToOneYard_WhenCompared_ShouldReturnsEquals()
         {
             double threeFeet = lengthConversion.LengthConversion("FeetToYard", 3.0);
             double oneYard = 1.0;
             Assert.AreEqual(oneYard, threeFeet);
+        }
+
+        /// <summary>
+        /// Test case 2.2
+        /// Checking 1 Feet is not equal to 1 Yard
+        /// </summary>
+        [Test]
+        public void CheckingGivenOneFeetIsNotEqualToOneYard_WhenCompared_ShouldReturnsEquals()
+        {
+            double oneFeet = 1.0;
+            double oneYard = lengthConversion.LengthConversion("YardToFeet", 1.0);
+            Assert.AreNotEqual(oneFeet, oneYard);
         }
     }
 }
