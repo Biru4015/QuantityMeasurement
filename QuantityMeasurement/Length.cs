@@ -80,6 +80,9 @@ namespace QuantityMeasurement
                 case "YardToInch":
                     double yardToInch = givenValue * 36;
                     return yardToInch;
+                case "InchToCentimeter":
+                    double inchToCentimeter = givenValue * 2.5;
+                    return inchToCentimeter;
                 default:
                     Console.WriteLine("Invalid Conversion");
                     return 0;
