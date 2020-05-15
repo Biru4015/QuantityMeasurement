@@ -313,5 +313,17 @@ namespace QuantityMeasurementTest
             double addTwoInch = 24.0;
             Assert.AreEqual(addTwoInch, addTwoFeet);
         }
+
+        /// <summary>
+        /// Test case 4.4
+        /// This test case for checking 2 Inch addition to 2.5 Centimeter Equal to 3 inch
+        /// </summary>
+        [Test]
+        public void CheckGivenTwoLengthsOneInInchSecondInCentimeterReturnInInch()
+        {
+            double oneInchOneCentimeter = lengthConversion.AddTwoLenghtsInInch(Length.Unit.INCH, 2, Length.Unit.CENTIMETER, 2.5);
+            double addTwoInch = 3.0;
+            Assert.AreEqual(addTwoInch, oneInchOneCentimeter);
+        }
     }
 }
