@@ -16,7 +16,7 @@ namespace QuantityMeasurementTest
         /// When given 0 feet and 0 feet are equals or not
         /// </summary>
         [Test]
-        public void given0Feetand0Feet_WhenCompared_ShouldReturnEqual()
+        public void Given0Feetand0Feet_WhenCompared_ShouldReturnEqual()
         {
             Length firstFeet = new Length(Length.Unit.FEET, 0.0);
             Length secondFeet = new Length(Length.Unit.FEET, 0.0);
@@ -78,7 +78,7 @@ namespace QuantityMeasurementTest
         /// Checking instance of Length are equal or not Checking Inch Feet Equality
         /// </summary>
         [Test]
-        public void CheckGivenZeroFeetAndZeroInchAreEqual()
+        public void CheckGivenZeroFeetAndZeroInchAreEqual_WhenAnalyse_ShouldReturnsEquals()
         {
             double zeroFeet = lengthConversion.LengthConversion("FeetToInch", 0.0);
             double zeroInch = lengthConversion.LengthConversion("InchToFeet", 0.0);
@@ -264,6 +264,18 @@ namespace QuantityMeasurementTest
             double oneYard = lengthConversion.LengthConversion("YardToFeet", 1.0);
             double threeFeet = 3.0;
             Assert.AreEqual(threeFeet, oneYard);
+        }
+
+        /// <summary>
+        /// Test case 3.1
+        /// This test case for checking 2 Inch is equal to 5 Centimetre
+        /// </summary>
+        [Test]
+        public void WhenGivenTwoInch_WhenConverted_ShouldReturnsFiveCentimeter()
+        {
+            double twoInch = lengthConversion.LengthConversion("InchToCentimeter", 2.0);
+            double fiveCentimeter = 5.0;
+            Assert.AreEqual(fiveCentimeter, twoInch);
         }
     }
 }
