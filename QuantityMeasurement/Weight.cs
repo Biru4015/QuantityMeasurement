@@ -58,5 +58,31 @@ namespace QuantityMeasurement
                     return 0;
             }
         }
+
+        /// <summary>
+        /// Adding two weights in grams
+        /// if its unit is not in gram then we are converting it in grams
+        /// and making addition of it.
+        /// </summary>
+        /// <param name="unitOne"></param>
+        /// <param name="valueOne"></param>
+        /// <param name="unitTwo"></param>
+        /// <param name="valueTwo"></param>
+        /// <returns></returns>
+        public double AddTwoWeightInGrams(Unit unitOne, double valueOne, Unit unitTwo, double valueTwo)
+        {
+            double firstValueInGrams = valueOne;
+            double secondValueInGrams = valueTwo;
+
+            if (unitOne == Unit.TONNE)
+            {
+                firstValueInGrams = WeightConversion("TonneToKilogram", valueOne);
+            }
+            if (unitTwo == Unit.GRAMS)
+            {
+                secondValueInGrams = WeightConversion("GramToKilogram", valueTwo);
+            }
+            return firstValueInGrams + secondValueInGrams;
+        }
     }
 }
