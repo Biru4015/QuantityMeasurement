@@ -11,6 +11,7 @@ namespace QuantityMeasurementTest
         readonly Length length = new Length();
         readonly Volume volume = new Volume();
         readonly Weight weight = new Weight();
+        readonly Temperature temperature = new Temperature();
 
 
         /// <summary>
@@ -422,6 +423,32 @@ namespace QuantityMeasurementTest
             double addInKg = weight.AddTwoWeightInGrams(Weight.Unit.KILOGRAM,500.0,Weight.Unit.KILOGRAM,600.0);
             double additionInKilograms = 1100;
             Assert.AreEqual(additionInKilograms,addInKg);
+        }
+
+        /// <summary>
+        /// Test case 9.1
+        /// This tes case is for checking conversion of Temperature
+        /// Fahrenhiet to Celsius
+        /// </summary>
+        [Test]
+        public void CheckTemperatureConversionFahrenhiteToCelsius_WhenCompared_ShouldReturnsEquals()
+        {
+            double fahrenhiteToCelsius = temperature.TemperatureConversion("FahrenhiteToCelsius", 212);
+            double hundredCelsius = 100;
+            Assert.AreEqual(hundredCelsius, fahrenhiteToCelsius);
+        }
+
+        /// <summary>
+        /// Test case 9.2
+        /// This test case is created for conversion of Tempreture
+        /// CelsiusToFahrenhiet
+        /// </summary>
+        [Test]
+        public void CheckingTempretureConversionCelsiusToFahrenhiet_WhenCompared_ShouldReturnsEquals()
+        {
+            double celsiusToFahrenhiet = temperature.TemperatureConversion("CelsiusToFahrenhiet",200);
+            double fahrenhiet = 392;
+            Assert.AreEqual(fahrenhiet, celsiusToFahrenhiet);
         }
     }
 }
