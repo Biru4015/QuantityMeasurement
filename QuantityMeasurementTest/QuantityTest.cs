@@ -411,5 +411,17 @@ namespace QuantityMeasurementTest
             double additionInKilograms = 1001;
             Assert.AreEqual(additionInKilograms, addOneTonneOneThousandGrams);
         }
+
+        /// <summary>
+        ///  Test case 8.2
+        ///  This test case is created for checking 500kg and 600kg and should returns 1100 kg
+        /// </summary>
+        [Test]
+        public void WhenAdded500KgAnd600Kg_WhenAdded_ShouldReturns110Kg()
+        {
+            double addInKg = weight.AddTwoWeightInGrams(Weight.Unit.KILOGRAM,500.0,Weight.Unit.KILOGRAM,600.0);
+            double additionInKilograms = 1100;
+            Assert.AreEqual(additionInKilograms,addInKg);
+        }
     }
 }
