@@ -105,26 +105,17 @@ namespace QuantityMeasurement
         {
             double firstValueInInch = valueOne;
             double secondValueInInch = valueTwo;
-            //
+
             if (unitOne == Unit.INCH && unitTwo == Unit.INCH)
                 return firstValueInInch + secondValueInInch;
             if (unitOne == Unit.FEET)
-            {
                 firstValueInInch = LengthConversion("FeetToInch", valueOne);
-            }
             else if (unitOne == Unit.CENTIMETER)
-            {
                 firstValueInInch = LengthConversion("CentimeterToInch", valueOne);
-            }
-
             if (unitTwo == Unit.FEET)
-            {
                 secondValueInInch = LengthConversion("FeetToInch", valueTwo);
-            }
             else if (unitTwo == Unit.CENTIMETER)
-            {
                 secondValueInInch = LengthConversion("CentimeterToInch", valueTwo);
-            }
             return firstValueInInch + secondValueInInch;
         }
 

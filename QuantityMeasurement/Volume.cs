@@ -69,13 +69,9 @@ namespace QuantityMeasurement
             double secondValueInLitre = valueTwo;
 
             if (unitOne == Unit.GALLON)
-            {
                 firstValueInLitre = VolumeConversion("GallonToLitre", valueOne);
-            }
             else if (unitTwo == Unit.MILILITRE)
-            {
                 secondValueInLitre = VolumeConversion("MililitreToLitre", valueTwo);
-            }
             return firstValueInLitre + secondValueInLitre;
         }
     }
