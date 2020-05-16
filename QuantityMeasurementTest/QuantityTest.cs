@@ -10,6 +10,7 @@ namespace QuantityMeasurementTest
         /// </summary>
         readonly Length length = new Length();
         readonly Volume volume = new Volume();
+        readonly Weight weight = new Weight();
 
 
         /// <summary>
@@ -373,6 +374,18 @@ namespace QuantityMeasurementTest
             double oneLitreOneThousandMiliLitre = volume.AddTwoVolumesInLitres(Volume.Unit.LITRE, 1.0, Volume.Unit.MILILITRE, 1000);
             double addInLitre = 2;
             Assert.AreEqual(addInLitre, oneLitreOneThousandMiliLitre);
+        }
+
+        /// <summary>
+        /// Test Case 7.1
+        /// This test case is created checking 1 Kilogram is equal to 1000 grams
+        /// </summary>
+        [Test]
+        public void CheckGivenOneKilogram_WhenCompared_ShouldRetuns1000Grams()
+        {
+            double oneKilogramsInGrams = weight.WeightConversion("KilogramToGram", 1.0);
+            double oneThousandGrams = 1000;
+            Assert.AreEqual(oneThousandGrams, oneKilogramsInGrams);
         }
     }
 }
