@@ -387,5 +387,17 @@ namespace QuantityMeasurementTest
             double oneThousandGrams = 1000;
             Assert.AreEqual(oneThousandGrams, oneKilogramsInGrams);
         }
+
+        /// <summary>
+        /// Test case 7.2
+        /// Checking 1 Tonne is equal to 1000 Kilograms
+        /// </summary>
+        [Test]
+        public void CheckGivenOneTonneIsEqual1000Kg_WhenCompred_ShouldReturnsEquals()
+        {
+            double oneTonneInKilograms = weight.WeightConversion("TonneToKilogram", 1.0);
+            double oneThousandKiloGrams = 1000;
+            Assert.AreEqual(oneThousandKiloGrams, oneTonneInKilograms);
+        }
     }
 }
