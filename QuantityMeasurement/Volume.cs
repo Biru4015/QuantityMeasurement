@@ -6,10 +6,13 @@ namespace QuantityMeasurement
 {
     public class Volume
     {
-        // Variables
+        //// Variables
         Unit unit;
         private double value;
 
+        /// <summary>
+        /// This is enum class for using constant
+        /// </summary>
         public enum Unit
         {
             GALLON,
@@ -17,11 +20,17 @@ namespace QuantityMeasurement
             MILILITRE
         };
 
-        // Default Constructor
+        /// <summary>
+        /// Default Constructor 
+        /// </summary>
         public Volume()
         { }
 
-        // Parameterised COnstructor
+        /// <summary>
+        /// Parameterised COnstructor
+        /// </summary>
+        /// <param name="unit"></param>
+        /// <param name="value"></param>
         public Volume(Unit unit, double value)
         {
             this.unit = unit;

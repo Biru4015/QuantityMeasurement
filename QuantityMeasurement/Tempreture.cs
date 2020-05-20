@@ -6,6 +6,9 @@ namespace QuantityMeasurement
 {
     public class Temperature
     {
+        /// <summary>
+        /// This is enum class for using constant
+        /// </summary>
         public enum Unit
         {
             FAHRENHIET,

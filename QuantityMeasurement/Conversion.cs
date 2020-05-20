@@ -5,8 +5,6 @@ namespace QuantityMeasurement
 {
     public class Conversion
     {
-        public double feet;
-
         /// <summary>
         /// Main method
         /// </summary>
