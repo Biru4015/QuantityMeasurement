@@ -11,6 +11,7 @@ namespace QuantityMeasurementTest
         readonly Length length = new Length();
         readonly Volume volume = new Volume();
         readonly Weight weight = new Weight();
+        readonly WeightAdd weightAdd = new WeightAdd();
         readonly Temperature temperature = new Temperature();
 
 
@@ -408,7 +409,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void WhenAdded1TonneAnd1000Gram_WhenAdded_ShouldReturns1001Kg()
         {
-            double addOneTonneOneThousandGrams = weight.AddTwoWeightInGrams(Weight.Unit.TONNE, 1.0, Weight.Unit.GRAMS, 1000);
+            double addOneTonneOneThousandGrams = weightAdd.AddTwoWeightInGrams(WeightAdd.Unit.TONNE, 1.0, WeightAdd.Unit.GRAMS, 1000);
             double additionInKilograms = 1001;
             Assert.AreEqual(additionInKilograms, addOneTonneOneThousandGrams);
         }
@@ -420,7 +421,7 @@ namespace QuantityMeasurementTest
         [Test]
         public void WhenAdded500KgAnd600Kg_WhenAdded_ShouldReturns110Kg()
         {
-            double addInKg = weight.AddTwoWeightInGrams(Weight.Unit.KILOGRAM,500.0,Weight.Unit.KILOGRAM,600.0);
+            double addInKg = weightAdd.AddTwoWeightInGrams(WeightAdd.Unit.KILOGRAM,500.0,WeightAdd.Unit.KILOGRAM,600.0);
             double additionInKilograms = 1100;
             Assert.AreEqual(additionInKilograms,addInKg);
         }
