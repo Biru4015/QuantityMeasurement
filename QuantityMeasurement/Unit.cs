@@ -19,24 +19,6 @@ namespace QuantityMeasurement
         public static readonly Unit FAHRENHIET = new Unit(1.0);
         public static readonly Unit CELCIUS = new Unit(2.12);
 
-        public static IEnumerable<Unit> Values
-        {
-            get
-            {
-                yield return FEET;
-                yield return INCH;
-                yield return CENTIMETER;
-                yield return YARD;
-                yield return LITRE;
-                yield return GALLON;
-                yield return MILILITRE;
-                yield return KILOGRAM;
-                yield return GRAM;
-                yield return TONNE;
-                yield return FAHRENHIET;
-                yield return CELCIUS;
-            }
-        }
         private double ConversionFactor; 
 
         private Unit(double baseUnitConvertor)

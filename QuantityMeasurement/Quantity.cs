@@ -34,9 +34,9 @@ namespace QuantityMeasurement
             return Double.Equals(that.unit.GetConvertedValue(that.value),this.unit.GetConvertedValue(this.value));
         }
 
-        public double addedQuantity(Quantity that)
+        public Quantity addedQuantity(Quantity that)
         {
-            return this.unit.GetConvertedValue(this.value) + that.unit.GetConvertedValue(that.value);
+            return new Quantity(Unit.KILOGRAM, this.unit.GetConvertedValue(this.value) + that.unit.GetConvertedValue(that.value));
         }
 
         /// <summary>
