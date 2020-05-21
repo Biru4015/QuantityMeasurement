@@ -285,8 +285,9 @@ namespace QuantityMeasurementTest
         {
             Quantity twoInch1 = new Quantity(Unit.INCH,2.0);
             Quantity twoInch2 = new Quantity(Unit.INCH, 2.0);
-            double addedQuality = twoInch1.addedQuantity(twoInch2);
-            Assert.AreEqual(4,addedQuality);
+            Quantity addedInch = new Quantity(Unit.INCH,4);
+            Quantity addedQuality = twoInch1.addedQuantity(twoInch2);
+            Assert.AreEqual(addedInch,addedQuality);
 
         }
 
@@ -299,8 +300,9 @@ namespace QuantityMeasurementTest
         {
             Quantity oneFeet = new Quantity(Unit.FEET, 1.0);
             Quantity twoInch = new Quantity(Unit.INCH, 2.0);
-            double addedQuality = oneFeet.addedQuantity(twoInch);
-            Assert.AreEqual(14, addedQuality);
+            Quantity addedInch = new Quantity(Unit.INCH, 14);
+            Quantity addedQuality = oneFeet.addedQuantity(twoInch);
+            Assert.AreEqual(addedInch, addedQuality);
 
         }
 
@@ -313,8 +315,9 @@ namespace QuantityMeasurementTest
         {
             Quantity oneFeet1 = new Quantity(Unit.FEET, 1.0);
             Quantity oneFeet2 = new Quantity(Unit.FEET, 1.0);
-            double addedQuality = oneFeet1.addedQuantity(oneFeet2);
-            Assert.AreEqual(24, addedQuality);
+            Quantity addedInch = new Quantity(Unit.INCH,24);
+            Quantity addedQuality = oneFeet1.addedQuantity(oneFeet2);
+            Assert.AreEqual(addedInch, addedQuality);
         }
 
         /// <summary>
@@ -326,8 +329,9 @@ namespace QuantityMeasurementTest
         {
             Quantity twoInch = new Quantity(Unit.INCH, 2.0);
             Quantity centimeter = new Quantity(Unit.CENTIMETER, 2.5);
-            double addedQuality = twoInch.addedQuantity(centimeter);
-            Assert.AreEqual(3, addedQuality);
+            Quantity addedInch = new Quantity(Unit.INCH, 3);
+            Quantity addedQuality = twoInch.addedQuantity(centimeter);
+            Assert.AreEqual(addedInch, addedQuality);
         }
 
         /// <summary>
@@ -363,8 +367,9 @@ namespace QuantityMeasurementTest
         {
             Quantity oneGallon = new Quantity(Unit.GALLON, 1.0);
             Quantity litres = new Quantity(Unit.LITRE, 3.78);
-            double addedQuantity = oneGallon.addedQuantity(litres);
-            Assert.AreEqual(7.56,addedQuantity);
+            Quantity addedLitres = new Quantity(Unit.LITRE,7.56);
+            Quantity addedQuantity = oneGallon.addedQuantity(litres);
+            Assert.AreEqual(addedLitres,addedQuantity);
         }
 
         /// <summary>
@@ -376,8 +381,9 @@ namespace QuantityMeasurementTest
         {
             Quantity oneLitre = new Quantity(Unit.LITRE, 1.0);
             Quantity mililitres = new Quantity(Unit.MILILITRE, 1000.0);
-            double addedQuantity = oneLitre.addedQuantity(mililitres);
-            Assert.AreEqual(2,addedQuantity);
+            Quantity addedLitres = new Quantity(Unit.LITRE,2);
+            Quantity addedQuantity = oneLitre.addedQuantity(mililitres);
+            Assert.AreEqual(addedLitres,addedQuantity);
         }
 
         /// <summary>
@@ -413,8 +419,9 @@ namespace QuantityMeasurementTest
         {
             Quantity oneTonne = new Quantity(Unit.TONNE, 1.0);
             Quantity thousandGram = new Quantity(Unit.GRAM, 1000.0);
-            double addedQuantity = oneTonne.addedQuantity(thousandGram);
-            Assert.AreEqual(1001, addedQuantity);
+            Quantity addedKilogram = new Quantity(Unit.KILOGRAM,1001);
+            Quantity addedQuantity = oneTonne.addedQuantity(thousandGram);
+            Assert.AreEqual(addedKilogram, addedQuantity);
         }
 
         /// <summary>
@@ -426,8 +433,9 @@ namespace QuantityMeasurementTest
         {
             Quantity kilogram1 = new Quantity(Unit.KILOGRAM, 500.0);
             Quantity kilogram2 = new Quantity(Unit.KILOGRAM, 600.0);
-            double addedQuantity = kilogram1.addedQuantity(kilogram2);
-            Assert.AreEqual(1100, addedQuantity);
+            Quantity addedKilogram = new Quantity(Unit.KILOGRAM,1100);
+            Quantity addedQuantity = kilogram1.addedQuantity(kilogram2);
+            Assert.AreEqual(addedKilogram, addedQuantity);
         }
 
         /// <summary>
