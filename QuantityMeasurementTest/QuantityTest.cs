@@ -61,7 +61,7 @@ namespace QuantityMeasurementTest
         /// When given 1 feet and 1 inch returns not equals
         /// </summary>
         [Test]
-        public void Given1FeetAnd1Inch_WhenCompared_ShouldReturnsFalse()
+        public void GivenOneFeetAndOnrInch_WhenCompared_ShouldReturnsFalse()
         {
             Quantity firstInch = new Quantity(Unit.FEET, 1.0);
             Quantity secondInch = new Quantity(Unit.INCH, 1.0);
@@ -233,7 +233,7 @@ namespace QuantityMeasurementTest
         /// This test case for Checking 1 Yard is equal to 36 Inch
         /// </summary>
         [Test]
-        public void CheckGivenOneYardIsEqualToThirtySixInch()
+        public void CheckGivenOneYardIsEqualToThirtySixInch_WhenCompared_ShouldReturnEquals()
         {
             Quantity oneYard = new Quantity(Unit.YARD, 1.0);
             Quantity thirtySixInch = new Quantity(Unit.INCH, 36.0);
@@ -325,7 +325,7 @@ namespace QuantityMeasurementTest
         /// This test case for checking 2 Inch addition to 2.5 Centimeter Equal to 3 inch
         /// </summary>
         [Test]
-        public void CheckGivenTwoLengthsOneInInchSecondInCentimeterReturnInInch()
+        public void CheckGivenTwoLengthsOneInInchSecondInCentimeter_WhenCalculagted_ShouldReturnsInInch()
         {
             Quantity twoInch = new Quantity(Unit.INCH, 2.0);
             Quantity centimeter = new Quantity(Unit.CENTIMETER, 2.5);
