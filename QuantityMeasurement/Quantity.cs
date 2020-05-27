@@ -24,7 +24,7 @@ namespace QuantityMeasurement
         /// <returns></returns>
         public override bool Equals(object obj)
         {
-            //If Object is Null It Will Return False.
+            //// If Object is Null It Will Return False.
             if (obj == null||this.GetType()!=obj.GetType())
                 return false;
             if (obj == this)
@@ -34,7 +34,7 @@ namespace QuantityMeasurement
             return Double.Equals(that.unit.GetConvertedValue(that.value),this.unit.GetConvertedValue(this.value));
         }
 
-        public Quantity addedQuantity(Quantity that)
+        public Quantity AddedQuantity(Quantity that)
         {
             return new Quantity(Unit.KILOGRAM, this.unit.GetConvertedValue(this.value) + that.unit.GetConvertedValue(that.value));
         }
